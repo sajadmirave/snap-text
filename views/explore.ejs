@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="..//css/main.css" />
+    <link rel="stylesheet" href="..//css/nav.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+      }
+
+      main {
+        width: 100%;
+        /* height: 500px; */
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-flow: column;
+      }
+
+      .main-title h2 {
+        color: #e91e63;
+      }
+
+      .main-posts {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-post-single-box {
+        margin: 15px;
+        width: 400px;
+        height: 120px;
+        background: #57dcbe;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .post-details p {
+        color: #ffff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <li><a href="">Home</a></li>
+      <li><a href="">Explore</a></li>
+
+      <% if (user) { %>
+
+      <li><a href="/user/dashboard">Dashboard</a></li>
+      <% } else { %>
+      <li><a href="/user/singup">SingUp</a></li>
+      <% } %>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <% post.map((i)=>{ %>
+    <div class="main-posts">
+      <div class="main-post-single-box">
+        <!-- post details -->
+        <div class="post-details">
+          <p><%= i.post %></p>
+        </div>
+        <!-- post details end -->
+      </div>
+    </div>
+    <% }) %>
+  </body>
+</html>

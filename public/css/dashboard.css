@@ -1,0 +1,59 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-flow: column;
+  background: #fff;
+}
+
+.container {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+header h1 span {
+  color: #e91e63;
+}
+
+section {
+  width: 400px;
+  height: 170px;
+  background: rgb(170, 247, 170);
+  border-radius: 17px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+section .logout button {
+  padding: 10px 12px;
+  background: #fd3b7c;
+  color: #fff;
+  border: none;
+  border-radius: 13px;
+}
+section .logout button:hover {
+  background: red;
+  cursor: pointer;
+}
+
+section .contact-us button {
+  padding: 10px 12px;
+  background: #fdea3b;
+  color: #000;
+  border: none;
+  border-radius: 13px;
+  margin: 20px;
+}
+
+section .contact-us button:hover {
+  background: yellow;
+  cursor: pointer;
+}

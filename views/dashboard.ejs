@@ -1,0 +1,75 @@
+<% include('./includes/body.ejs') %>
+
+<!-- styles -->
+<link rel="stylesheet" href="..//css/main.css" />
+<link rel="stylesheet" href="..//css/dashboard.css" />
+<link rel="stylesheet" href="..//css/nav.css">
+<!-- =============================================== -->
+
+<!-- title -->
+<title><%= pageTitle %></title>
+
+<!-- =============================================== -->
+
+<nav>
+  <li><a href="/">Home</a></li>
+  <li><a href="">Explore</a></li>
+
+  <% if (user) { %>
+
+  <li><a href="/user/dashboard">Dashboard</a></li>
+  <% } else { %>
+    <li><a href="/user/singup">SingUp</a></li>
+  <% }  %> 
+
+
+  <% if (admin) { %>
+    
+
+      
+
+       
+   <li> <a href="/admin">Admin</a></li>
+  <% } %>
+
+</nav>
+
+<!-- header -->
+<div class="container">
+  <header>
+    <h1>
+      Hello
+      <span> <%= user_name %> </span>
+    </h1>
+  </header>
+  <!-- header end -->
+  
+  <section>
+    <!-- contactus -->
+    <div class="contact-us">
+      <form action="/user/dashboard/contactus" method="get">
+        <button>Contact Us</button>
+      </form>
+    </div>
+    <!-- contactus end -->
+  
+    <!-- =============================================== -->
+  
+    <!-- logout -->
+    <div class="logout">
+      <form action="/user/logout" method="post">
+        <button>logout</button>
+      </form>
+    </div>
+  
+    <!-- logout end -->
+    
+  </section>
+</div>
+
+<!-- static javascript code -->
+<script src="..//js/dashboard.js"></script>
+
+<!-- =============================================== -->
+
+<% include('./includes/footer.ejs') %>

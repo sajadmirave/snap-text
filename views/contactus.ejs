@@ -1,0 +1,110 @@
+<% include("./includes/body.ejs") %>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Pacifico&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+    /* font-family: "Pacifico", cursive; */
+    color: #000;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-box {
+    width: 600px;
+    height: 480px;
+    background: lightblue;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .subject input {
+    width: 220px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  textarea {
+    resize: none;
+    height: 200px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-top: 2px;
+  }
+
+  .button button {
+    margin-top: 20px;
+    padding: 16px 26px;
+    background: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+  }
+
+  .button button:hover {
+    background: #e21455;
+    cursor: pointer;
+  }
+</style>
+<div class="main">
+  <form action="/user/dashboard/contactus" method="post">
+    <!-- form box -->
+    <div class="form-box">
+      <!-- title -->
+      <div class="title">
+        <h2>Lets Talk</h2>
+      </div>
+      <br />
+      <br />
+      <!-- title end -->
+
+      <p style="color: green"><%= sendMessage %></p>
+
+      <br>
+
+      <!-- subject -->
+      <div class="subject">
+        <input type="text" name="subject" id="" placeholder="subject" />
+      </div>
+      <!-- subject end -->
+
+      <!-- ============================================ -->
+
+      <!-- message -->
+
+      <div class="message">
+        <textarea
+          name="message"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Type SomeThing...."
+        ></textarea>
+      </div>
+      <!-- message end-->
+
+      <div class="button">
+        <button>Send</button>
+      </div>
+    </div>
+  </form>
+  <!-- form box end -->
+</div>
+
+<% include("./includes/footer.ejs") %>

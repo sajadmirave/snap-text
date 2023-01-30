@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add post</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Pacifico&display=swap");
+      
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Fredoka", sans-serif;
+          /* font-family: "Pacifico", cursive; */
+          color: #000;
+        }
+      
+        body {
+            height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        .form-box {
+          width: 600px;
+          height: 480px;
+          background: pink;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+      
+        .subject input {
+          width: 220px;
+          height: 30px;
+          border: none;
+          border-radius: 10px;
+          margin-bottom: 10px;
+          padding-left: 10px;
+        }
+      
+        textarea {
+          resize: none;
+          height: 200px;
+          width: 300px;
+          border: none;
+          border-radius: 20px;
+          padding-left: 10px;
+          padding-top: 2px;
+        }
+      
+        .button button {
+          margin-top: 20px;
+          padding: 16px 26px;
+          background: #e91e63;
+          color: #fff;
+          border: none;
+          border-radius: 14px;
+        }
+      
+        .button button:hover {
+          background: #e21455;
+          cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+    <div class="main">
+        <form action="/admin/addpost" method="post">
+          <!-- form box -->
+          <div class="form-box">
+            <!-- title -->
+            <div class="title">
+              <h2>Add Post</h2>
+            </div>
+            <br>
+            <!-- title end -->
+      
+            <p style="color: green">
+                <%= successAddPost %>
+            </p>
+            <br>
+      
+           
+      
+            <!-- ============================================ -->
+      
+            <!-- message -->
+      
+            <div class="message">
+              <textarea
+                name="message"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Type SomeThing...."
+              ></textarea>
+            </div>
+            <!-- message end-->
+      
+            <div class="button">
+              <button>Send</button>
+            </div>
+          </div>
+        </form>
+        <!-- form box end -->
+      </div>
+</body>
+</html>

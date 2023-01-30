@@ -1,0 +1,116 @@
+<% include("./includes/body.ejs") %>
+
+<!-- head -->
+<title><%= title %></title>
+<link rel="stylesheet" href="..//css/main.css" />
+<link rel="stylesheet" href="..//css/home.css" />
+<!-- for responsive styels -->
+<link rel="stylesheet" href="..//css/responive/home.css" />
+<link rel="stylesheet" href="..//css/nav.css">
+<!-- end -->
+
+<!-- body -->
+
+
+
+<nav>
+    <li><a href="">Home</a></li>
+    <li><a href="/explore">Explore</a></li>
+  
+    <% if (user) { %>
+  
+    <li><a href="/user/dashboard">Dashboard</a></li>
+    <% } else { %>
+      <li><a href="/user/singup">SingUp</a></li>
+    <% }  %> 
+  
+  
+  </nav>
+
+
+
+<header>
+  <!-- header-img -->
+  <div class="header-img">
+    <img src="..//img/snap.jpg" width="400" alt="snap" />
+  </div>
+  <!-- end -->
+
+  <!-- header-info -->
+  <div class="header-info">
+    <!-- header info title -->
+    <div class="header-info-title">
+      <h2>Snap Text</h2>
+    </div>
+    <!-- end -->
+
+    <br />
+
+    <!-- header info desc -->
+    <div class="header-info-desc">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+        praesentium saepe eos repudiandae excepturi quasi unde temporibus!
+        Omnis, laboriosam numquam voluptas corporis nulla ab molestias nihil? A
+        numquam voluptas tempore.
+      </p>
+    </div>
+    <!-- end -->
+    <br />
+    <!-- header button -->
+    <div class="header-button">
+      <button>Explore</button>
+    </div>
+    <!-- end -->
+  </div>
+  <!-- end -->
+</header>
+<!-- header end -->
+<br />
+<!-- main -->
+<main>
+  <!-- main title -->
+  <div class="main-title">
+    <h2>Top Post :</h2>
+  </div>
+  <!-- end -->
+  <br />
+  <!-- main posts -->
+  <div class="main-posts">
+    <!-- singpe box -->
+    <div class="main-post-single-box">
+      <!-- post details -->
+      <div class="post-details">
+        <p>I Love You :D</p>
+      </div>
+      <!-- post details end -->
+    </div>
+    <div class="main-post-single-box">
+      <!-- post details -->
+      <div class="post-details">
+        <p>I Love You :D</p>
+      </div>
+      <!-- post details end -->
+    </div>
+    <div class="main-post-single-box">
+      <!-- post details -->
+      <div class="post-details">
+        <p>I Love You :D</p>
+      </div>
+      <!-- post details end -->
+    </div>
+    <!-- singpe box end -->
+  </div>
+  <!-- end -->
+</main>
+<!-- main end -->
+<br />
+<!-- footer -->
+<footer>
+  <h4>make with love :D</h4>
+</footer>
+<!-- footer end -->
+
+<!-- end -->
+
+<% include("./includes/footer.ejs") %>
